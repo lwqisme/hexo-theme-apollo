@@ -1,6 +1,7 @@
 ::selection {
     color: #FFFFFF;
-    background-color: #42b983;
+    // background-color: #42b983;
+    background-color: #ca4a23;
 }
 
 html, body {
@@ -36,7 +37,8 @@ a, a:active {
 a.nav-list-link.active,
 a.nav-list-link:hover,
 a.post-title-link:hover {
-    border-bottom: 2px solid #42b983;
+    // border-bottom: 2px solid #42b983;
+    border-bottom: 2px solid #ca4a23;
 }
 
 hr {

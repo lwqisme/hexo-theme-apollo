@@ -2,7 +2,10 @@ ul.nav.nav-list
     each value, key in theme.menu
         li.nav-list-item
             - var re = /^(http|https):\/\/*/gi;
+            - var tagre = /.*tag.*/;
             - var tar = re.test(value) ? "_blank" : "_self"
-            - var act = !re.test(value) && "/"+page.current_url === value
+            - var act = !re.test(value) && "/"+page.current_url === value || (tagre.test(page.path) && tagre.test(value))
+            //- p #{page.path}
+            //- p #{value}
             a.nav-list-link(class={active: act} href=url_for(value) target=tar)
                 != key.toUpperCase()
