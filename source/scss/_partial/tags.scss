@@ -1,0 +1,17 @@
+.tagctt {
+    .tags-count {
+        font-size: 1.25rem;
+        padding: 2px 0 0 25px;
+        margin-bottom: 1em;
+    }
+    .tag-item {
+        display: block;
+        color: rgb(202, 74, 35);
+        padding: 2px 0 0 50px;
+        &:hover {
+            border-bottom: 0;
+            // color: #267B54;
+            color: rgb(177, 64, 12);
+        }
+    }
+}

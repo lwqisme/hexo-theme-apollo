@@ -15,9 +15,16 @@ mixin posts()
                         a.post-title-link(href= url_for(item.path))
                             != item.title
                     +postInfo(item)
+                    - item.tags.each(function (tag) {
+                        .tag-container
+                            a.tag-item(href= url_for(tag.path))
+                                !=tag.name
+                    - })
                     .post-content
                         != item.excerpt
-                    a.read-more(href= url_for(item.path))!= __('more')
+                    //- .tag-item
+                    //-     != item.tags
+                    //- a.read-more(href= url_for(item.path))!= __('more')
         - })
 
 //- Archive Page

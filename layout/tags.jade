@@ -1,0 +1,23 @@
+extends partial/layout
+
+//- 用来给标签页命名的
+block site_title
+    != page.title
+
+block tagcontainer
+    h2.post-title
+        != page.title
+    .tagctt
+        //- TODO: 这里需要加上：是标签的总数
+        .tags-count 共 #{site.tags.length} 个标签
+        //- TODO: 这里需要加上：每一个标签套上一个herf
+        - site.tags.each(function(item) {
+            if(item.posts.length)
+                a.tag-item(href= url_for(item.path))
+                    != item.name
+        - })
+        //- p © #{year} #[a(href=config.url)!= config.author], powered by #[a(href=hexoURL, target="_blank") Hexo] and #[a(href=apolloURL, target="_blank") hexo-theme-apollo].
+
+
+block copyright
+    include partial/copyright
