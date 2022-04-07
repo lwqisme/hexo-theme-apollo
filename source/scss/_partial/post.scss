@@ -73,13 +73,15 @@
         font-size: 18px;
     }
     a {
-        color: #42b983;
+        // color: #42b983;
+        color: #ca4a23;
         word-break: break-all;
     }
     blockquote {
         margin: 2em 0;
         padding-left: 20px;
-        border-left: 4px solid #42b983;
+        // border-left: 4px solid #42b983;
+        border-left: 4px solid #ca4a23;
     }
     img {
         display: block;
@@ -254,7 +256,8 @@ pre {
     .apache .cbracket,
     .tex .command,
     .prompt {
-        color: #42b983;
+        // color: #42b983; //这里是代码块中的string
+        color: #ca4a23;
     }
     .comment,
     .java .annotation,
